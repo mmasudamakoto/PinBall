@@ -32,13 +32,14 @@ public class Scorecontollol : MonoBehaviour {
 
     void Start()
     {
+        this.scoreText = GameObject.Find("scoreText").GetComponent<Text>();
         score = 0;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "score: " + score;
     }
 
     void SetScore()
     {
-        scoreText.text = string.Format("Score:{0}", score);
+        scoreText.text = string.Format("score:{0}", score);
     }
 
     // Update is called once per frame
